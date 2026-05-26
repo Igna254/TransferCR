@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="TransferCR ofrece servicio de transporte privado, transfer aeropuerto, tours y viajes ejecutivos con seguridad, puntualidad y estilo moderno." />
+  <meta name="keywords" content="TransferCR, transporte privado, transfer aeropuerto, tours privados, transporte ejecutivo" />
+  <title>TransferCR | Transporte Privado</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="preloader" id="preloader">
+    <div class="loader">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home">
+        <div class="brand-icon">T</div>
+        <div>
+          <span>TransferCR</span>
+          <small> Transporte Privado</small>
+        </div>
+      </a>
+      <nav class="nav" id="mainNav">
+        <a href="#home" data-i18n="navHome">Inicio</a>
+        <a href="#services" data-i18n="navServices">Servicios</a>
+        <a href="#about" data-i18n="navAbout">Sobre Nosotros</a>
+        <a href="#pricing" data-i18n="navPricing">Precios</a>
+        <a href="#contact" data-i18n="navContact">Contacto</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+        <button class="btn btn-primary" onclick="scrollToSection('contact')" data-i18n="reserveNow">Reservar Ahora</button>
+        <button class="mode-toggle" id="themeToggle">🌙</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="heroEyebrow">Servicio  24/7</p>
+          <h1 data-i18n="heroTitle">Traslados al aeropuerto, hoteles y tours privados con TransferCR.</h1>
+          <p data-i18n="heroSubtitle">Experiencia, seguridad y puntualidad en cada viaje. Reserva tu transporte privado y viaja con total tranquilidad.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="https://wa.me/50612345678" target="_blank" data-i18n="heroWhatsApp">Reservar por WhatsApp</a>
+            <a class="btn btn-secondary" href="#services" data-i18n="heroServices">Ver Servicios</a>
+          </div>
+          <div class="hero-highlights">
+            <div>
+              <strong>24/7</strong>
+              <span data-i18n="highlight24">Disponibilidad continua</span>
+            </div>
+            <div>
+              <strong data-i18n="highlightSafe">Seguridad</strong>
+              <span data-i18n="highlightSafeDesc">Protocolos </span>
+            </div>
+            <div>
+              <span data-i18n="highlightFleetDesc">Vehículo Confortable</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-card">
+            <div class="hero-tag" data-i18n="heroTag">Transporte privado</div>
+            <div class="hero-image">
+              <img class="hero-car-photo" src="Nissan.jpg" alt="Nissan" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about" id="about">
+      <div class="container section-grid">
+        <div class="section-intro">
+          <p class="eyebrow" data-i18n="aboutEyebrow">Confianza y calidad</p>
+          <h2 data-i18n="aboutTitle">Sobre TransferCR</h2>
+          <p data-i18n="aboutText">TransferCR es una empresa especializada en transporte privado y transfer aeroportuario con años de trayectoria en el mercado. Nuestro objetivo es brindar un servicio, puntual y discreto para clientes, turistas y viajeros exigentes.</p>
+        </div>
+        <div class="about-cards">
+          <div class="info-card">
+            <h3 data-i18n="aboutCard1Title">Experiencia </h3>
+            <p data-i18n="aboutCard1Text">Conductor profesional, atención personalizada al cliente.</p>
+          </div>
+          <div class="info-card">
+            <h3 data-i18n="aboutCard2Title">Servicio seguro</h3>
+            <p data-i18n="aboutCard2Text">Seguridad, cumplimiento de protocolos e itinerarios optimizados en cada traslado.</p>
+          </div>
+          <div class="info-card">
+            <h3 data-i18n="aboutCard3Title">Reserva ágil</h3>
+            <p data-i18n="aboutCard3Text">Confirmación rápida, soporte por WhatsApp y opciones flexibles de pago.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="servicesEyebrow">Servicios destacados</p>
+          <h2 data-i18n="servicesTitle">Soluciones de transporte para cada necesidad</h2>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <div class="service-icon">✈️</div>
+            <h3 data-i18n="service1Title">Transfer Aeropuerto</h3>
+            <p data-i18n="service1Text">Traslados seguros y puntuales desde y hacia aeropuertos nacionales e internacionales.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">🗺️</div>
+            <h3 data-i18n="service3Title">Tours Privados</h3>
+            <p data-i18n="service3Text">Rutas turísticas personalizadas con guías y vehículos.</p>
+          </article>
+          <article class="service-card">
+            <div class="service-icon">⌚</div>
+            <h3 data-i18n="service5Title">Transporte 24/7</h3>
+            <p data-i18n="service5Text">Atención permanente con disponibilidad para viajes de último minuto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="pricingEyebrow">Precios aproximados</p>
+          <h2 data-i18n="pricingTitle">Tarifas diseñadas para viajes</h2>
+        </div>
+        <div class="pricing-grid">
+          <div class="pricing-card">
+            <h3 data-i18n="price1Title">Transfer aeropuerto</h3>
+            <p class="price">Desde ₡45,000</p>
+          </div>
+          <div class="pricing-card">
+            <h3 data-i18n="price3Title">Tours privados</h3>
+            <p class="price">Desde ₡60,000</p>
+            <p data-i18n="price3Note">Rutas personalizadas para grupos y viajes exclusivos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section testimonials" id="testimonials">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="testimonialsEyebrow">Testimonios</p>
+          <h2 data-i18n="testimonialsTitle">Clientes satisfechos con nuestro servicio</h2>
+        </div>
+        <div class="testimonial-grid">
+          <article class="testimonial-card">
+            <p data-i18n="testimonial1Text">"TransferCR hizo nuestro traslado al aeropuerto perfecto. Puntuales, cómodos y muy profesionales."</p>
+            <span data-i18n="testimonial1Author">— Ana M.</span>
+          </article>
+          <article class="testimonial-card">
+            <p data-i18n="testimonial2Text">"Excelente servicio para viajes. El chofer fue amable y el vehículo impecable."</p>
+            <span data-i18n="testimonial2Author">— Roberto G.</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow" data-i18n="faqEyebrow">Preguntas frecuentes</p>
+          <h2 data-i18n="faqTitle">Todo lo que necesitas saber antes de reservar</h2>
+        </div>
+        <div class="faq-grid">
+          <div class="faq-item">
+            <h3 data-i18n="faq1Question">¿Cómo reservo mi traslado?</h3>
+            <p data-i18n="faq1Answer">Completa el formulario de reserva o envíanos un mensaje por WhatsApp para confirmar tu servicio rápidamente.</p>
+          </div>
+          <div class="faq-item">
+            <h3 data-i18n="faq2Question">¿Las tarifas incluyen todos los cargos?</h3>
+            <p data-i18n="faq2Answer">Las tarifas son aproximadas y pueden variar según la ruta y la hora. Te entregamos un presupuesto claro antes de confirmar.</p>
+          </div>
+          <div class="faq-item">
+            <h3 data-i18n="faq3Question">¿Puedo cambiar mi reserva?</h3>
+            <p data-i18n="faq3Answer">Sí, ofrecemos flexibilidad para cambios con aviso previo a nuestro equipo de reservas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container contact-grid">
+        <div class="contact-info">
+          <p class="eyebrow" data-i18n="contactEyebrow">Reserva tu traslado</p>
+          <h2 data-i18n="contactTitle">Estamos listos para atenderte</h2>
+          <p data-i18n="contactText">Contacta a TransferCR y recibe un servicio de transporte privado con cuidado superior y atención.</p>
+          <div class="contact-details">
+            <div><strong data-i18n="contactPhoneLabel">Teléfono:</strong> +506 8690-4507</div>
+            <div><strong data-i18n="contactEmailLabel">Email:</strong> contacto@transfercr.com</div>
+            <div><strong data-i18n="contactLocationLabel">Ubicación:</strong> Alajuela, Costa Rica</div>
+          </div>
+          <div class="map-frame">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12042.315499306483!2d-84.0907281!3d9.933985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8fa0b7d8f65d3d99%3A0x864b60b6f5e4ab34!2sSan%20Jos%C3%A9%2C%20Costa%20Rica!5e0!3m2!1ses!2sus!4v1740000000000!5m2!1ses!2sus" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+        <form class="reservation-form" id="reservationForm">
+          <h3 data-i18n="contactFormTitle">Formulario de reserva</h3>
+          <label for="name" data-i18n="formNameLabel">Nombre completo</label>
+          <input type="text" id="name" name="name" placeholder="Tu nombre" data-i18n-placeholder="formNamePlaceholder" required />
+          <label for="destination" data-i18n="formDestinationLabel">Destino</label>
+          <input type="text" id="destination" name="destination" placeholder="Aeropuerto, hotel o ruta" data-i18n-placeholder="formDestinationPlaceholder" required />
+          <label for="date" data-i18n="formDateLabel">Fecha</label>
+          <input type="date" id="date" name="date" required />
+          <label for="passengers" data-i18n="formPassengersLabel">Cantidad de pasajeros</label>
+          <input type="number" id="passengers" name="passengers" min="1" placeholder="Número de pasajeros" data-i18n-placeholder="formPassengersPlaceholder" required />
+          <label for="email" data-i18n="formEmailLabel">Correo electrónico</label>
+          <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" data-i18n-placeholder="formEmailPlaceholder" required />
+          <label for="phone" data-i18n="formPhoneLabel">Número de contacto</label>
+          <input type="tel" id="phone" name="phone" placeholder="+506 1234 5678" data-i18n-placeholder="formPhonePlaceholder" required />
+          <label for="comments" data-i18n="formCommentsLabel">Comentarios</label>
+          <textarea id="comments" name="comments" rows="4" placeholder="Escribe aquí tus comentarios" data-i18n-placeholder="formCommentsPlaceholder"></textarea>
+          <button type="submit" class="btn btn-primary" data-i18n="formSubmit">Enviar solicitud</button>
+          <p class="form-note" data-i18n="formNote">También puedes reservar directamente por WhatsApp haciendo clic en el botón flotante.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <a class="whatsapp-float" href="https://wa.me/50686904507" target="_blank" aria-label="Contactar por WhatsApp" data-i18n-aria="whatsappAria">
+    <span data-i18n="whatsappFloatText">WhatsApp</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.67 13.47c-.24-.12-1.42-.7-1.64-.78-.22-.08-.38-.12-.54.12-.16.24-.6.78-.74.94-.13.16-.27.18-.5.06-.24-.12-1.02-.37-1.93-1.19-.71-.63-1.18-1.39-1.32-1.63-.13-.24-.01-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.4-.14 0-.3-.02-.46-.02-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.33.98 2.5c.12.16 1.69 2.7 4.1 3.79.57.25 1.01.4 1.36.51.57.18 1.09.15 1.5.09.46-.07 1.42-.58 1.62-1.14.2-.56.2-1.04.14-1.14-.06-.1-.24-.16-.49-.28z"></path><path d="M12 2C6.48 2 2 6.48 2 12c0 1.99.64 3.83 1.72 5.34L2 22l4.75-1.23C8.14 21.35 10.01 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"></path></svg>
+  </a>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <h3>TransferCR</h3>
+        <p data-i18n="footerDesc">Servicio de transporte privado para viajes al aeropuerto, turismo y traslados ejecutivos.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#services" data-i18n="footerServiceLink1">Servicios</a>
+        <a href="#pricing" data-i18n="footerServiceLink2">Precios</a>
+        <a href="#contact" data-i18n="footerServiceLink3">Contacto</a>
+      </div>
+      <div class="social-links">
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="LinkedIn">LN</a>
+      </div>
+    </div>
+    <p class="footer-note" data-i18n="footerCopy">© 2026 TransferCR. Todos los derechos reservados.</p>
+  </footer>
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3.2.0/dist/email.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
