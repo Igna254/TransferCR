@@ -28,9 +28,17 @@ body {
   min-height: 100vh;
 }
 
-img,
-iframe {
-  max-width: 100%;
+/* Estilo general para computadoras */
+.columna {
+    width: 50%;
+    float: left;
+}
+
+/* Adaptación para teléfonos */
+@media (max-width: 768px) {
+    .columna {
+        width: 100%; /* Las columnas ocupan toda la pantalla verticalmente */
+    }
 }
 
 button,
