@@ -1,14 +1,13 @@
-:root {  --bg:#64a37d;
-  --surface: #36e854;  --bg:  #64a37d;
-  --surface: #36e854;
-  --surface-soft: rgba(240, 34, 41, 0.05);
+:root {  --bg:#87CEEB;
+  --surface: #f2f3f7;
+  --surface-soft: rgba(240, 240, 245, 0.7);
   --text: #000000;
-  --text-muted: #000000;
-  --primary: #0f5eff;
+  --text-muted: #333333;
+  --primary: #36128a;
   --primary-soft: rgba(15, 94, 255, 0.16);
   --accent: #52f175;
-  --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
-  --border: rgba(255, 255, 255, 0.08);
+  --shadow: 0 24px 80px rgba(0, 0, 0, 0.12);
+  --border: rgba(0, 0, 0, 0.08);
   font-family: 'Inter', sans-serif;
 }
 
@@ -57,8 +56,8 @@ select {
   top: 0;
   z-index: 20;
   backdrop-filter: blur(20px);
-  background: rgba(5, 6, 10, 0.82);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: rgba(242, 243, 247, 0.98);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .header-inner {
@@ -129,7 +128,7 @@ select {
 }
 
 .lang-btn {
-  border: 1px solid #000;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   background: transparent;
   color: var(--text);
   width: 36px;
@@ -146,7 +145,7 @@ select {
 }
 
 .btn {
-  border: 1px solid #000;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   cursor: pointer;
   border-radius: 999px;
   padding: 0.95rem 1.55rem;
@@ -168,20 +167,11 @@ select {
   color: var(--text);
 }
 
-.mode-toggle {
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.08);
-  color: var(--text);
-  border: 1px solid #000;
-}
-
 .nav-toggle {
   display: none;
   width: 44px;
   height: 44px;
-  border: 1px solid #000;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   background: rgba(255, 255, 255, 0.08);
   color: var(--text);
   border-radius: 50%;
@@ -234,8 +224,8 @@ select {
 }
 
 .hero-highlights div {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #000;
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 18px;
   padding: 1rem 1.1rem;
 }
@@ -256,8 +246,8 @@ select {
   max-width: 520px;
   border-radius: 32px;
   padding: 2rem;
-  background: linear-gradient(180deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
-  border: 1px solid #000;
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   box-shadow: var(--shadow);
 }
 
@@ -345,9 +335,9 @@ select {
 .gallery-item {
   border-radius: 26px;
   padding: 1.8rem;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid #000;
-  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.16);
+  background: #f6f7fb;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.08);
   transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
 }
 
@@ -381,7 +371,7 @@ select {
   place-items: center;
   margin-bottom: 1.25rem;
   border-radius: 18px;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(0, 0, 0, 0.03);
   font-size: 1.8rem;
 }
 
@@ -399,11 +389,11 @@ select {
 }
 
 .gallery-item:nth-child(odd) {
-  background: linear-gradient(135deg, rgba(15, 94, 255, 0.18), rgba(255,255,255,0.03));
+  background: #eef1f6;
 }
 
 .gallery-item:nth-child(even) {
-  background: rgba(255, 255, 255, 0.03);
+  background: #f7f8fb;
 }
 
 .pricing-grid {
@@ -469,7 +459,7 @@ select {
   border-radius: 26px;
   overflow: hidden;
   min-height: 320px;
-  border: 1px solid #000;
+  border: 1px solid rgba(0, 0, 0, 0.12);
 }
 
 .contact-info iframe {
@@ -483,8 +473,8 @@ select {
   gap: 1rem;
   padding: 2rem;
   border-radius: 28px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid #000;
+  background: var(--surface);
+  border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .reservation-form h3 {
@@ -498,7 +488,7 @@ select {
 
 .reservation-form input {
   width: 100%;
-  border: 1px solid #000;
+  border: 1px solid rgba(0, 0, 0, 0.12);
   border-radius: 16px;
   padding: 1rem 1.1rem;
   background: rgba(255, 255, 255, 0.04);
@@ -630,6 +620,8 @@ select {
 @media (max-width: 760px) {
   .header-inner {
     flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem 0;
   }
   .nav {
     width: 100%;
@@ -637,15 +629,45 @@ select {
     order: 3;
     display: none;
     margin-top: 0.75rem;
+    gap: 0.75rem;
   }
   .nav.active {
     display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .nav-toggle {
     display: inline-flex;
   }
   .header-actions {
     order: 2;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .hero-grid,
+  .service-grid,
+  .pricing-grid,
+  .testimonial-grid,
+  .faq-grid,
+  .gallery-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-copy p,
+  .section-heading p,
+  .section-intro p,
+  .contact-info,
+  .reservation-form {
+    max-width: 100%;
+  }
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .hero-actions .btn {
+    width: 100%;
   }
   .hero-visual {
     order: 2;
@@ -656,9 +678,15 @@ select {
   .hero-highlights {
     grid-template-columns: 1fr;
   }
-  .whatsapp-float {
-    right: 1rem;
-    bottom: 1rem;
+  .reservation-form {
+    padding: 1.5rem;
+  }
+  .contact-grid {
+    gap: 1.5rem;
+  }
+  .footer-links,
+  .social-links {
+    justify-content: center;
   }
 }
 
@@ -672,50 +700,3 @@ select {
   }
 }
 
-.light-mode {
-  background: #0b0405;
-  color: #0c0c0c;
-}
-
-.light-mode .site-header {
-  background: rgba(255, 255, 255, 0.95);
-  color: #0e0f0e;
-  border-color: rgba(15, 23, 42, 0.08);
-}
-
-.light-mode .nav a,
-.light-mode .brand,
-.light-mode .brand small,
-.light-mode .header-actions button,
-.light-mode .nav-toggle {
-  color: #0c0c0c;
-}
-
-.light-mode .btn-secondary,
-.light-mode .reservation-form,
-.light-mode .info-card,
-.light-mode .service-card,
-.light-mode .pricing-card,
-.light-mode .testimonial-card,
-.light-mode .faq-item,
-.light-mode .gallery-item,
-.light-mode .hero-card,
-.light-mode .map-frame {
-  background: #dee1df;
-}
-
-.light-mode .hero-copy p,
-.light-mode .section-heading p,
-.light-mode .footer-note,
-.light-mode .contact-details,
-.light-mode .form-note {
-  color: #553336;
-}
-
-.light-mode .btn-primary {
-  box-shadow: 0 20px 45px rgba(15, 94, 255, 0.25);
-}
-
-.light-mode .preloader {
-  background: #fff;
-}

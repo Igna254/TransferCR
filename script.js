@@ -234,7 +234,6 @@ function applyTranslations(locale, i18nTextElements, i18nPlaceholderElements, i1
 
 document.addEventListener('DOMContentLoaded', () => {
   const preloader = document.getElementById('preloader');
-  const themeToggle = document.getElementById('themeToggle');
   const navToggle = document.getElementById('navToggle');
   const mainNav = document.getElementById('mainNav');
   const reservationForm = document.getElementById('reservationForm');
@@ -243,7 +242,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const i18nTextElements = document.querySelectorAll('[data-i18n]');
   const i18nPlaceholderElements = document.querySelectorAll('[data-i18n-placeholder]');
   const i18nAriaElements = document.querySelectorAll('[data-i18n-aria]');
-  const savedTheme = localStorage.getItem('transfercr-theme') || 'dark';
   const savedLang = localStorage.getItem('transfercr-lang') || 'es';
   let currentLang = savedLang;
 
@@ -252,14 +250,6 @@ document.addEventListener('DOMContentLoaded', () => {
     preloader.style.opacity = '0';
     preloader.style.visibility = 'hidden';
   }, 800);
-
-  if (savedTheme === 'light') {
-    htmlElement.classList.add('light-mode');
-    themeToggle.textContent = '🌙';
-  } else {
-    htmlElement.classList.remove('light-mode');
-    themeToggle.textContent = '☀️';
-  }
 
   const setLanguage = (language) => {
     const locale = translations[language] ? language : 'es';
@@ -297,13 +287,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   emailjsLoader.catch((error) => {
     console.warn(error.message, error);
-  });
-
-  themeToggle.addEventListener('click', () => {
-    htmlElement.classList.toggle('light-mode');
-    const isLight = htmlElement.classList.contains('light-mode');
-    themeToggle.textContent = isLight ? '🌙' : '☀️';
-    localStorage.setItem('transfercr-theme', isLight ? 'light' : 'dark');
   });
 
   navToggle.addEventListener('click', () => {
